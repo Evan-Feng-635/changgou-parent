@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-@MapperScan(basePackages = {"com.changgou.goods.dao"})
+@MapperScan(basePackages = {"com.changgou.dao"})
 @Slf4j
 public class GoodsApplication {
     public static void main(String[] args) {

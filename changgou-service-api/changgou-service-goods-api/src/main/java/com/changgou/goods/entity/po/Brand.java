@@ -1,6 +1,8 @@
 package com.changgou.goods.entity.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.changgou.entity.SuperEntityAuto;
 import com.changgou.entity.SuperEntitySnow;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -19,8 +21,8 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="tb_brand")
-public class Brand extends SuperEntitySnow<Long> {
+@TableName(value = "tb_brand")
+public class Brand extends SuperEntityAuto<Long> {
 
 	@ApiModelProperty(value = "品牌名称",required = false)
     @TableField(value = "name")

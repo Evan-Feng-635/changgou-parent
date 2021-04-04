@@ -16,7 +16,7 @@ public class SuperEntityAuto<ID extends Serializable>  implements Serializable{
      * UUID
      */
     @Id()
-    @TableId(type = IdType.AUTO)
+    @TableId(value = "id",type = IdType.AUTO)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @TableField("id")
     @ApiModelProperty(value = "ID")

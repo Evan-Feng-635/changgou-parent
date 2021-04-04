@@ -39,12 +39,12 @@ public class BaseResponse<T> implements Serializable {
         return new BaseResponse();
     }
 
-    public static BaseResponse SUCCESS(String _message){
-        return new BaseResponse(false,StatusCode.OK,_message,null);
+    public static <T> BaseResponse SUCCESS(T _data) {
+        return new BaseResponse(true, StatusCode.OK, "操作成功!", _data);
     }
 
     public static <T> BaseResponse SUCCESS(String _message, T _data) {
-        return new BaseResponse(false,StatusCode.OK,_message,_data);
+        return new BaseResponse(true,StatusCode.OK,_message,_data);
     }
     /**
      * 操作失败
