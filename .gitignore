@@ -50,3 +50,6 @@ catalina.base_IS_UNDEFINED
 ## rebel
 rebel-remote.xml
 rebel.xml
+logging.path_IS_UNDEFINED
+
+.log
