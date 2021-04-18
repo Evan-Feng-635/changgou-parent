@@ -1,11 +1,13 @@
 package com.changgou.goods.entity.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.changgou.entity.SuperEntitySnow;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Table;
@@ -17,9 +19,10 @@ import javax.persistence.Table;
  *****/
 @ApiModel(description = "Spu",value = "Spu")
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="tb_spu")
+@TableName(value="tb_spu")
 public class Spu extends SuperEntitySnow<Long> {
 
 	@ApiModelProperty(value = "货号",required = false)

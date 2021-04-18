@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ import javax.persistence.*;
  * @Description:Brand构建
  * @Date 2019/6/14 19:13
  *****/
+@EqualsAndHashCode(callSuper = true)
 @ApiModel(description = "Brand",value = "Brand")
 @Data
 @AllArgsConstructor

@@ -1,11 +1,14 @@
 package com.changgou.goods.entity.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.changgou.entity.SuperEntityAuto;
 import com.changgou.entity.SuperEntitySnow;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -15,12 +18,13 @@ import javax.persistence.*;
  * @Description:Category构建
  * @Date 2019/6/14 19:13
  *****/
+@EqualsAndHashCode(callSuper = true)
 @ApiModel(description = "Category",value = "Category")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="tb_category")
-public class Category extends SuperEntitySnow<Long> {
+@TableName(value="tb_category")
+public class Category extends SuperEntityAuto<Long> {
 
 	@ApiModelProperty(value = "分类名称",required = false)
     @TableField(value = "name")

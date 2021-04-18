@@ -1,11 +1,13 @@
 package com.changgou.goods.entity.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.changgou.entity.SuperEntitySnow;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -19,9 +21,10 @@ import java.util.Date;
  *****/
 @ApiModel(description = "Pref",value = "Pref")
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="tb_pref")
+@TableName(value="tb_pref")
 public class Pref extends SuperEntitySnow<Long> {
 
 

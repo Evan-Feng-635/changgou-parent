@@ -6,6 +6,7 @@ import com.changgou.entity.SuperEntityAuto;
 import com.changgou.entity.SuperEntitySnow;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /****
@@ -14,6 +15,7 @@ import lombok.NoArgsConstructor;
  * @Date 2019/6/14 19:13
  *****/
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @TableName(value = "tb_album")
