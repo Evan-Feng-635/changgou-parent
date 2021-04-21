@@ -6,8 +6,10 @@ import com.changgou.dao.BrandMapper;
 import com.changgou.goods.entity.po.Brand;
 import com.changgou.service.BrandService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional(rollbackFor = Exception.class)
 public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements BrandService {
 
     @Override
